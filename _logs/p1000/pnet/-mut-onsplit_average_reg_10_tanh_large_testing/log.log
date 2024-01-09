@@ -1,0 +1,116 @@
+07/12 11:36 - {logs.py:22} - setting logs
+07/12 11:36 - {run_me.py:105} - random seed 23
+07/12 11:36 - {one_split.py:132} - loading data....
+07/12 11:36 - {data_reader.py:102} - loading cnv_del
+07/12 11:36 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_grade/_database/prostate/processed/breast_data_cna.csv,
+07/12 11:37 - {data_reader.py:41} - (2173, 22544)
+07/12 11:37 - {data_reader.py:212} - loading response from breast_response.csv
+07/12 11:37 - {data_reader.py:69} - some genes dont exist in the original data set
+07/12 11:37 - {data_reader.py:72} - loaded data 1892 samples, 18358 variables, 1892 responses 
+07/12 11:37 - {data_reader.py:73} - 18358
+07/12 11:37 - {data_reader.py:102} - loading cnv_amp
+07/12 11:37 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_grade/_database/prostate/processed/breast_data_cna.csv,
+07/12 11:37 - {data_reader.py:36} - loading from memory cached_data
+07/12 11:37 - {data_reader.py:41} - (2173, 22544)
+07/12 11:37 - {data_reader.py:44} - loading from memory cached_data
+07/12 11:37 - {data_reader.py:69} - some genes dont exist in the original data set
+07/12 11:37 - {data_reader.py:72} - loaded data 1892 samples, 18358 variables, 1892 responses 
+07/12 11:37 - {data_reader.py:73} - 18358
+07/12 11:37 - {data_reader.py:102} - loading promoter
+07/12 11:37 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_grade/_database/prostate/processed/breast_data_promoters_rrbs.csv,
+07/12 11:37 - {data_reader.py:41} - (1418, 13188)
+07/12 11:37 - {data_reader.py:44} - loading from memory cached_data
+07/12 11:37 - {data_reader.py:69} - some genes dont exist in the original data set
+07/12 11:37 - {data_reader.py:72} - loaded data 1366 samples, 11304 variables, 1366 responses 
+07/12 11:37 - {data_reader.py:73} - 11304
+07/12 11:37 - {data_reader.py:265} - After combining, loaded data 1366 samples, 55833 variables, 1366 responses 
+07/12 11:37 - {one_split.py:137} - predicting
+07/12 11:37 - {one_split.py:150} - x_train (1175, 55833) y_train (1175, 1) 
+07/12 11:37 - {one_split.py:151} - x_test (126, 55833) y_test (126, 1) 
+07/12 11:37 - {one_split.py:154} - preprocessing....
+07/12 11:37 - {one_split.py:306} - preprocessing....
+07/12 11:37 - {pre.py:10} - Pre-processing: None
+07/12 11:37 - {nn.py:112} - class_weight auto
+07/12 11:37 - {one_split.py:161} - fitting
+07/12 11:37 - {one_split.py:162} - {'type': 'nn', 'params': {'model_params': {'shuffle_genes': False, 'dropout_testing': False, 'kernel_initializer': 'lecun_uniform', 'n_hidden_layers': 2, 'dropout': [0.5, 0.1, 0.1, 0.1], 'attention': False, 'w_reg_outcomes': [0.01, 0.01, 0.01], 'loss_weights': [2, 20, 400], 'w_reg': [0.001, 0.001, 0.001, 0.001], 'add_unk_genes': False, 'activation': 'tanh', 'optimizer': 'Adam', 'use_bias': True, 'data_params': {'type': 'prostate_paper', 'params': {'balanced_data': False, 'data_type': ['cnv_del', 'cnv_amp', 'promoter'], 'mut_binary': True, 'cnv_levels': 5, 'selected_genes': 'breast_expressed_genes.csv', 'use_coding_genes_only': False, 'drop_AR': False, 'combine_type': 'union', 'training_split': 0}, 'id': 'ALL'}}, 'fitting_params': {'early_stop': False, 'shuffle': False, 'verbose': 2, 'samples_per_epoch': 10, 'reduce_lr': False, 'save_gradient': False, 'reduce_lr_after_nepochs': {'epochs_drop': 50, 'drop': 0.25}, 'batch_size': 32, 'max_f1': True, 'epoch': 5, 'monitor': 'val_o6_f1', 'save_name': 'pnet', 'select_best_model': False, 'n_outputs': 3, 'lr': 0.008, 'prediction_output': 'average', 'debug': False, 'class_weight': 'auto'}, 'feature_importance': 'deepexplain_deeplift', 'build_fn': <function build_pnet2 at 0x7f88b504bd70>}, 'id': 'P-net'}
+07/12 11:37 - {data_reader.py:102} - loading cnv_del
+07/12 11:37 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_grade/_database/prostate/processed/breast_data_cna.csv,
+07/12 11:37 - {data_reader.py:36} - loading from memory cached_data
+07/12 11:37 - {data_reader.py:41} - (2173, 22544)
+07/12 11:37 - {data_reader.py:44} - loading from memory cached_data
+07/12 11:37 - {data_reader.py:69} - some genes dont exist in the original data set
+07/12 11:37 - {data_reader.py:72} - loaded data 1892 samples, 18358 variables, 1892 responses 
+07/12 11:37 - {data_reader.py:73} - 18358
+07/12 11:37 - {data_reader.py:102} - loading cnv_amp
+07/12 11:37 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_grade/_database/prostate/processed/breast_data_cna.csv,
+07/12 11:37 - {data_reader.py:36} - loading from memory cached_data
+07/12 11:37 - {data_reader.py:41} - (2173, 22544)
+07/12 11:37 - {data_reader.py:44} - loading from memory cached_data
+07/12 11:37 - {data_reader.py:69} - some genes dont exist in the original data set
+07/12 11:37 - {data_reader.py:72} - loaded data 1892 samples, 18358 variables, 1892 responses 
+07/12 11:37 - {data_reader.py:73} - 18358
+07/12 11:37 - {data_reader.py:102} - loading promoter
+07/12 11:37 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_grade/_database/prostate/processed/breast_data_promoters_rrbs.csv,
+07/12 11:37 - {data_reader.py:36} - loading from memory cached_data
+07/12 11:37 - {data_reader.py:41} - (1418, 13188)
+07/12 11:37 - {data_reader.py:44} - loading from memory cached_data
+07/12 11:37 - {data_reader.py:69} - some genes dont exist in the original data set
+07/12 11:37 - {data_reader.py:72} - loaded data 1366 samples, 11304 variables, 1366 responses 
+07/12 11:37 - {data_reader.py:73} - 11304
+07/12 11:37 - {data_reader.py:265} - After combining, loaded data 1366 samples, 55833 variables, 1366 responses 
+07/12 11:37 - {prostate_models.py:125} - x shape (1366, 55833) , y shape (1366, 1) info (1366,) genes (55833,)
+07/12 11:37 - {prostate_models.py:127} - x shape (1366, 55833) , y shape (1366, 1) info (1366,) genes (55833,)
+07/12 11:38 - {builders_utils.py:264} - n_genes, n_pathways 18611 352 
+07/12 11:38 - {builders_utils.py:264} - n_genes, n_pathways 352 3378 
+07/12 11:38 - {prostate_models.py:187} - done compiling
+07/12 11:38 - {model_utils.py:36} -   - 0 inputs (None, 55833)
+07/12 11:38 - {model_utils.py:36} -   - 1 h0 (None, 18611)
+07/12 11:38 - {model_utils.py:36} -   - 2 dropout_0 (None, 18611)
+07/12 11:38 - {model_utils.py:36} -   - 3 h1 (None, 352)
+07/12 11:38 - {model_utils.py:36} -   - 4 dropout_1 (None, 352)
+07/12 11:38 - {model_utils.py:36} -   - 5 h2 (None, 3378)
+07/12 11:38 - {model_utils.py:36} -   - 6 o_linear1 (None, 1)
+07/12 11:38 - {model_utils.py:36} -   - 7 o_linear2 (None, 1)
+07/12 11:38 - {model_utils.py:36} -   - 8 o_linear3 (None, 1)
+07/12 11:38 - {model_utils.py:36} -   - 9 o1 (None, 1)
+07/12 11:38 - {model_utils.py:36} -   - 10 o2 (None, 1)
+07/12 11:38 - {model_utils.py:36} -   - 11 o3 (None, 1)
+07/12 11:38 - {prostate_models.py:191} - None
+07/12 11:38 - {prostate_models.py:192} - # of trainable params of the model is 137877
+07/12 11:38 - {nn.py:197} - start fitting
+07/12 11:38 - {nn.py:208} - class_weight {0: 0.994077834179357, 1: 1.0059931506849316}
+07/12 11:38 - {nn.py:250} - prediction threshold 0.34
+07/12 11:38 - {one_split.py:167} - predicting
+07/12 11:38 - {one_split.py:172} - model id: P-net_ALL
+07/12 11:38 - {one_split.py:295} - predicitng ...
+07/12 11:38 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.78      0.59      0.67        59
+           1       0.70      0.85      0.77        67
+
+   micro avg       0.73      0.73      0.73       126
+   macro avg       0.74      0.72      0.72       126
+weighted avg       0.74      0.73      0.72       126
+
+07/12 11:38 - {one_split.py:176} - model name P-net_ALL -- Test score {'aupr': 0.8828288573711216, 'f1': 0.7702702702702703, 'auc': 0.8580824690108778, 'recall': 0.8507462686567164, 'precision': 0.7037037037037037, 'accuracy': 0.7301587301587301}
+07/12 11:38 - {one_split.py:179} - saving results
+07/12 11:38 - {one_split.py:278} - saving yml : /home/user/tfprojects/pnet_prostate_paper-master2_grade/_logs/p1000/./pnet/onsplit_average_reg_10_tanh_large_testing/P-net_ALL_params.yml
+07/12 11:38 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_grade/_logs/p1000/./pnet/onsplit_average_reg_10_tanh_large_testing/P-net_ALL_testing.csv
+07/12 11:38 - {one_split.py:242} - saving coef 
+07/12 11:38 - {one_split.py:194} - saving coef
+07/12 11:38 - {one_split.py:196} - saving coef
+07/12 11:38 - {one_split.py:25} - saving model P-net_ALL coef to dir (/home/user/tfprojects/pnet_prostate_paper-master2_grade/_logs/p1000/pnet/onsplit_average_reg_10_tanh_large_testing/fs)
+07/12 11:38 - {one_split.py:29} - FS dir (/home/user/tfprojects/pnet_prostate_paper-master2_grade/_logs/p1000/pnet/onsplit_average_reg_10_tanh_large_testing/fs/P-net_ALL.h5)
+07/12 11:38 - {one_split.py:295} - predicitng ...
+07/12 11:38 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.82      0.58      0.68       591
+           1       0.67      0.88      0.76       584
+
+   micro avg       0.72      0.72      0.72      1175
+   macro avg       0.75      0.73      0.72      1175
+weighted avg       0.75      0.72      0.72      1175
+
+07/12 11:38 - {one_split.py:202} - model P-net_ALL -- Train score {'aupr': 0.8449398637102123, 'f1': 0.7592867756315007, 'auc': 0.8380183343763763, 'recall': 0.875, 'precision': 0.6706036745406824, 'accuracy': 0.7242553191489361}
+07/12 11:38 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_grade/_logs/p1000/./pnet/onsplit_average_reg_10_tanh_large_testing/P-net_ALL_training.csv
+07/12 11:38 - {run_me.py:134} - Elapsed Time: 1m 44s

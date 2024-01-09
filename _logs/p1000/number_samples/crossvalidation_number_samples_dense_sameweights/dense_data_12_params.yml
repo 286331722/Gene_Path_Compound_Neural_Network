@@ -1,0 +1,73 @@
+data:
+  id: data_12
+  params:
+    balanced_data: false
+    cnv_levels: 3
+    combine_type: union
+    data_type:
+    - mut_important
+    - cnv_del
+    - cnv_amp
+    - promoter
+    drop_AR: false
+    mut_binary: true
+    selected_genes: breast_expressed_genes.csv
+    training_split: '12'
+    use_coding_genes_only: true
+  type: prostate_paper
+models:
+  id: dense_data_12
+  params:
+    build_fn: !!python/name:model.builders.prostate_models.build_dense ''
+    fitting_params:
+      batch_size: 32
+      class_weight: auto
+      debug: false
+      early_stop: false
+      epoch: 5
+      monitor: val_f1
+      n_outputs: 1
+      prediction_output: average
+      reduce_lr: false
+      reduce_lr_after_nepochs:
+        drop: 0.25
+        epochs_drop: 50
+      samples_per_epoch: 10
+      save_gradient: false
+      save_name: dense
+      select_best_model: false
+      shuffle: true
+      verbose: 2
+    model_params:
+      activation: selu
+      data_params:
+        id: ALL
+        params:
+          balanced_data: false
+          cnv_levels: 3
+          combine_type: union
+          data_type:
+          - mut_important
+          - cnv_del
+          - cnv_amp
+          - promoter
+          drop_AR: false
+          mut_binary: true
+          selected_genes: breast_expressed_genes.csv
+          training_split: 0
+          use_coding_genes_only: true
+        type: prostate_paper
+      n_weights: 71009
+      optimizer: Adam
+      w_reg: 0.01
+  type: nn
+pipeline:
+  params:
+    n_splits: 5
+    save_train: true
+  type: crossvalidation
+pre:
+  type: null
+scores: '{"accuracy":{"0":0.6639344262,"1":0.6967213115,"2":0.7049180328,"3":0.7049180328,"4":0.7459016393},"auc":{"0":0.7605937922,"1":0.8089068826,"2":0.7740890688,"3":0.7905533063,"4":0.7997300945},"aupr":{"0":0.8011090722,"1":0.8392533955,"2":0.8211558092,"3":0.8372065819,"4":0.8251607048},"f1":{"0":0.5773195876,"1":0.6666666667,"2":0.6666666667,"3":0.6538461538,"4":0.7633587786},"precision":{"0":0.875,"1":0.8043478261,"2":0.8372093023,"3":0.8717948718,"4":0.7575757576},"recall":{"0":0.4307692308,"1":0.5692307692,"2":0.5538461538,"3":0.5230769231,"4":0.7692307692}}'
+scores_mean: '{"accuracy":0.7032786885,"auc":0.7867746289,"aupr":0.8247771127,"f1":0.6655715707,"precision":0.8291855516,"recall":0.5692307692}'
+scores_std: '{"accuracy":0.0292107044,"auc":0.0194828052,"aupr":0.0153092423,"f1":0.0661260811,"precision":0.0493045982,"recall":0.1240347346}'

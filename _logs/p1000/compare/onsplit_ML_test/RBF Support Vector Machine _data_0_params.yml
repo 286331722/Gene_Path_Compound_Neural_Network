@@ -1,0 +1,40 @@
+data_params:
+  id: data_0
+  params:
+    balanced_data: false
+    cnv_levels: 3
+    combine_type: union
+    data_type:
+    - mut_important
+    - cnv_del
+    - cnv_amp
+    drop_AR: false
+    mut_binary: true
+    selected_genes: tcga_prostate_expressed_genes_and_cancer_genes.csv
+    training_split: '0'
+    use_coding_genes_only: true
+  type: prostate_paper
+exp_name: /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test
+features_params: {}
+model_params:
+  id: RBF Support Vector Machine _data_0
+  params:
+    C: 100
+    class_weight:
+      0: 0.75
+      1: 1.5
+    gamma: 0.001
+    kernel: rbf
+    probability: true
+  type: svc
+pipeline_params:
+  params:
+    eval_dataset: test
+    save_train: true
+  type: one_split
+pre_params:
+  type: null
+score: '{''aupr'': 0.7354112503386988, ''f1'': 0.6820809248554912, ''auc'': 0.7501249375312343,
+  ''recall'': 0.6413043478260869, ''precision'': 0.7283950617283951, ''accuracy'':
+  0.6927374301675978}'
+task: classification_binary

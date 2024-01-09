@@ -1,0 +1,98 @@
+07/07 07:26 - {logs.py:22} - setting logs
+07/07 07:26 - {run_me.py:105} - random seed 23
+07/07 07:26 - {one_split.py:132} - loading data....
+07/07 07:26 - {data_reader.py:102} - loading mut_important
+07/07 07:26 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_mutations.csv,
+07/07 07:26 - {data_reader.py:41} - (2369, 173)
+07/07 07:26 - {data_reader.py:212} - loading response from breast_response.csv
+07/07 07:26 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:26 - {data_reader.py:72} - loaded data 1794 samples, 169 variables, 1794 responses 
+07/07 07:26 - {data_reader.py:73} - 169
+07/07 07:26 - {data_reader.py:114} - mut_binary = True
+07/07 07:26 - {data_reader.py:102} - loading cnv_del
+07/07 07:26 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_cna.csv,
+07/07 07:26 - {data_reader.py:41} - (2173, 22544)
+07/07 07:26 - {data_reader.py:44} - loading from memory cached_data
+07/07 07:26 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:26 - {data_reader.py:72} - loaded data 1892 samples, 18358 variables, 1892 responses 
+07/07 07:26 - {data_reader.py:73} - 18358
+07/07 07:26 - {data_reader.py:102} - loading cnv_amp
+07/07 07:26 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_cna.csv,
+07/07 07:26 - {data_reader.py:36} - loading from memory cached_data
+07/07 07:26 - {data_reader.py:41} - (2173, 22544)
+07/07 07:26 - {data_reader.py:44} - loading from memory cached_data
+07/07 07:26 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:26 - {data_reader.py:72} - loaded data 1892 samples, 18358 variables, 1892 responses 
+07/07 07:26 - {data_reader.py:73} - 18358
+07/07 07:26 - {data_reader.py:102} - loading promoter
+07/07 07:26 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_promoters_rrbs.csv,
+07/07 07:26 - {data_reader.py:41} - (1418, 13188)
+07/07 07:26 - {data_reader.py:44} - loading from memory cached_data
+07/07 07:26 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:26 - {data_reader.py:72} - loaded data 1366 samples, 11304 variables, 1366 responses 
+07/07 07:26 - {data_reader.py:73} - 11304
+07/07 07:26 - {data_reader.py:265} - After combining, loaded data 1327 samples, 69760 variables, 1327 responses 
+07/07 07:26 - {one_split.py:137} - predicting
+07/07 07:26 - {one_split.py:150} - x_train (1141, 69760) y_train (1141, 1) 
+07/07 07:26 - {one_split.py:151} - x_test (122, 69760) y_test (122, 1) 
+07/07 07:26 - {one_split.py:154} - preprocessing....
+07/07 07:26 - {one_split.py:306} - preprocessing....
+07/07 07:26 - {pre.py:10} - Pre-processing: None
+07/07 07:26 - {nn.py:112} - class_weight auto
+07/07 07:26 - {one_split.py:161} - fitting
+07/07 07:26 - {one_split.py:162} - {'type': 'nn', 'params': {'model_params': {'shuffle_genes': False, 'use_bias': True, 'optimizer': 'Adam', 'n_hidden_layers': 2, 'data_params': {'type': 'prostate_paper', 'params': {'balanced_data': False, 'data_type': ['mut_important', 'cnv_del', 'cnv_amp', 'promoter'], 'mut_binary': True, 'cnv_levels': 3, 'selected_genes': 'breast_expressed_genes.csv', 'use_coding_genes_only': True, 'drop_AR': False, 'combine_type': 'union', 'training_split': 0}, 'id': 'ALL'}, 'attention': False, 'w_reg_outcomes': [0.01, 0.01, 0.01], 'loss_weights': [2, 20, 400], 'w_reg': [0.001, 0.001, 0.001, 0.001], 'add_unk_genes': False, 'activation': 'tanh', 'sparse': False, 'sparse_first_layer': True, 'kernel_initializer': 'lecun_uniform', 'dropout_testing': False, 'dropout': [0.5, 0.1, 0.1, 0.1]}, 'fitting_params': {'early_stop': False, 'shuffle': True, 'verbose': 2, 'samples_per_epoch': 10, 'reduce_lr': False, 'save_gradient': False, 'reduce_lr_after_nepochs': {'epochs_drop': 50, 'drop': 0.25}, 'batch_size': 32, 'max_f1': True, 'epoch': 10, 'monitor': 'val_o6_f1', 'save_name': 'pnet', 'select_best_model': False, 'n_outputs': 3, 'lr': 0.008, 'prediction_output': 'average', 'debug': False, 'class_weight': 'auto'}, 'feature_importance': 'deepexplain_deeplift', 'build_fn': <function build_pnet2 at 0x7f685fd0ca28>}, 'id': 'P-net'}
+07/07 07:26 - {data_reader.py:102} - loading mut_important
+07/07 07:26 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_mutations.csv,
+07/07 07:26 - {data_reader.py:36} - loading from memory cached_data
+07/07 07:26 - {data_reader.py:41} - (2369, 173)
+07/07 07:26 - {data_reader.py:44} - loading from memory cached_data
+07/07 07:26 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:26 - {data_reader.py:72} - loaded data 1794 samples, 169 variables, 1794 responses 
+07/07 07:26 - {data_reader.py:73} - 169
+07/07 07:26 - {data_reader.py:114} - mut_binary = True
+07/07 07:26 - {data_reader.py:102} - loading cnv_del
+07/07 07:26 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_cna.csv,
+07/07 07:26 - {data_reader.py:36} - loading from memory cached_data
+07/07 07:26 - {data_reader.py:41} - (2173, 22544)
+07/07 07:26 - {data_reader.py:44} - loading from memory cached_data
+07/07 07:26 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:26 - {data_reader.py:72} - loaded data 1892 samples, 18358 variables, 1892 responses 
+07/07 07:26 - {data_reader.py:73} - 18358
+07/07 07:27 - {data_reader.py:102} - loading cnv_amp
+07/07 07:27 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_cna.csv,
+07/07 07:27 - {data_reader.py:36} - loading from memory cached_data
+07/07 07:27 - {data_reader.py:41} - (2173, 22544)
+07/07 07:27 - {data_reader.py:44} - loading from memory cached_data
+07/07 07:27 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:27 - {data_reader.py:72} - loaded data 1892 samples, 18358 variables, 1892 responses 
+07/07 07:27 - {data_reader.py:73} - 18358
+07/07 07:27 - {data_reader.py:102} - loading promoter
+07/07 07:27 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_promoters_rrbs.csv,
+07/07 07:27 - {data_reader.py:36} - loading from memory cached_data
+07/07 07:27 - {data_reader.py:41} - (1418, 13188)
+07/07 07:27 - {data_reader.py:44} - loading from memory cached_data
+07/07 07:27 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:27 - {data_reader.py:72} - loaded data 1366 samples, 11304 variables, 1366 responses 
+07/07 07:27 - {data_reader.py:73} - 11304
+07/07 07:27 - {data_reader.py:265} - After combining, loaded data 1327 samples, 69760 variables, 1327 responses 
+07/07 07:27 - {prostate_models.py:125} - x shape (1327, 69760) , y shape (1327, 1) info (1327,) genes (69760,)
+07/07 07:27 - {prostate_models.py:127} - x shape (1327, 69760) , y shape (1327, 1) info (1327,) genes (69760,)
+07/07 07:27 - {builders_utils.py:264} - n_genes, n_pathways 17440 352 
+07/07 07:27 - {builders_utils.py:264} - n_genes, n_pathways 352 3378 
+07/07 07:27 - {prostate_models.py:187} - done compiling
+07/07 07:27 - {model_utils.py:36} -   - 0 inputs (None, 69760)
+07/07 07:27 - {model_utils.py:36} -   - 1 h0 (None, 17440)
+07/07 07:27 - {model_utils.py:36} -   - 2 dropout_0 (None, 17440)
+07/07 07:27 - {model_utils.py:36} -   - 3 h1 (None, 352)
+07/07 07:27 - {model_utils.py:36} -   - 4 dropout_1 (None, 352)
+07/07 07:27 - {model_utils.py:36} -   - 5 h2 (None, 3378)
+07/07 07:27 - {model_utils.py:36} -   - 6 o_linear1 (None, 1)
+07/07 07:27 - {model_utils.py:36} -   - 7 o_linear2 (None, 1)
+07/07 07:27 - {model_utils.py:36} -   - 8 o_linear3 (None, 1)
+07/07 07:27 - {model_utils.py:36} -   - 9 o1 (None, 1)
+07/07 07:27 - {model_utils.py:36} -   - 10 o2 (None, 1)
+07/07 07:27 - {model_utils.py:36} -   - 11 o3 (None, 1)
+07/07 07:27 - {prostate_models.py:191} - None
+07/07 07:27 - {prostate_models.py:192} - # of trainable params of the model is 7440039
+07/07 07:27 - {nn.py:197} - start fitting
+07/07 07:27 - {nn.py:208} - class_weight {0: 1.0026362038664323, 1: 0.9973776223776224}

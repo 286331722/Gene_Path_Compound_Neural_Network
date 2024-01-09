@@ -1,0 +1,99 @@
+data:
+  id: data_0
+  params:
+    balanced_data: false
+    cnv_levels: 3
+    combine_type: union
+    data_type:
+    - mut_important
+    - cnv_del
+    - cnv_amp
+    - promoter
+    drop_AR: false
+    mut_binary: true
+    selected_genes: breast_expressed_genes.csv
+    training_split: '0'
+    use_coding_genes_only: true
+  type: prostate_paper
+models:
+  id: P-net_data_0
+  params:
+    build_fn: !!python/name:model.builders.prostate_models.build_pnet2 ''
+    feature_importance: deepexplain_grad*input
+    fitting_params:
+      batch_size: 32
+      class_weight: auto
+      debug: false
+      early_stop: false
+      epoch: 5
+      lr: 0.008
+      max_f1: true
+      monitor: val_o6_f1
+      n_outputs: 3
+      prediction_output: average
+      reduce_lr: false
+      reduce_lr_after_nepochs:
+        drop: 0.25
+        epochs_drop: 50
+      samples_per_epoch: 10
+      save_gradient: false
+      save_name: pnet
+      select_best_model: false
+      shuffle: true
+      verbose: 2
+    model_params:
+      activation: tanh
+      add_unk_genes: false
+      attention: false
+      data_params:
+        id: ALL
+        params:
+          balanced_data: false
+          cnv_levels: 3
+          combine_type: union
+          data_type:
+          - mut_important
+          - cnv_del
+          - cnv_amp
+          - promoter
+          drop_AR: false
+          mut_binary: true
+          selected_genes: breast_expressed_genes.csv
+          training_split: 18
+          use_coding_genes_only: true
+        type: prostate_paper
+      dropout:
+      - 0.5
+      - 0.1
+      - 0.1
+      - 0.1
+      dropout_testing: false
+      kernel_initializer: lecun_uniform
+      loss_weights:
+      - 2
+      - 20
+      - 400
+      n_hidden_layers: 2
+      optimizer: Adam
+      shuffle_genes: false
+      use_bias: true
+      w_reg:
+      - 0.001
+      - 0.001
+      - 0.001
+      - 0.001
+      w_reg_outcomes:
+      - 0.01
+      - 0.01
+      - 0.01
+  type: nn
+pipeline:
+  params:
+    n_splits: 5
+    save_train: true
+  type: crossvalidation
+pre:
+  type: null
+scores: '{"accuracy":{"0":0.7540983607,"1":0.7950819672,"2":0.7786885246,"3":0.7786885246,"4":0.7704918033},"auc":{"0":0.8377867746,"1":0.8472334683,"2":0.8547908232,"3":0.8480431849,"4":0.8453441296},"aupr":{"0":0.8643492098,"1":0.8692309098,"2":0.8849436169,"3":0.8743704419,"4":0.8711719076},"f1":{"0":0.765625,"1":0.8031496063,"2":0.7906976744,"3":0.7652173913,"4":0.7846153846},"precision":{"0":0.7777777778,"1":0.8225806452,"2":0.796875,"3":0.88,"4":0.7846153846},"recall":{"0":0.7538461538,"1":0.7846153846,"2":0.7846153846,"3":0.6769230769,"4":0.7846153846}}'
+scores_mean: '{"accuracy":0.7754098361,"auc":0.8466396761,"aupr":0.8728132172,"f1":0.7818610113,"precision":0.8123697615,"recall":0.7569230769}'
+scores_std: '{"accuracy":0.0148900837,"auc":0.0060995068,"aupr":0.0076931429,"f1":0.0164278393,"precision":0.0414882806,"recall":0.0466638489}'

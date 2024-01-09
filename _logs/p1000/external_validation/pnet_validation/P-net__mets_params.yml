@@ -1,0 +1,75 @@
+- - &id001
+    id: ALL
+    params:
+      balanced_data: false
+      cnv_levels: 5
+      combine_type: union
+      data_type:
+      - mut_important
+      - cnv_del
+      - cnv_amp
+      drop_AR: false
+      mut_binary: true
+      selected_genes: breast_expressed_genes.csv
+      training_split: 0
+      use_coding_genes_only: true
+    type: prostate_paper
+- - id: P-net
+    params:
+      build_fn: !!python/name:model.builders.prostate_models.build_pnet2 ''
+      feature_importance: deepexplain_deeplift
+      fitting_params:
+        batch_size: 32
+        class_weight: auto
+        debug: false
+        early_stop: false
+        epoch: 10
+        lr: 0.001
+        max_f1: true
+        monitor: val_o6_f1
+        n_outputs: 3
+        prediction_output: average
+        reduce_lr: false
+        reduce_lr_after_nepochs:
+          drop: 0.25
+          epochs_drop: 10
+        samples_per_epoch: 10
+        save_gradient: false
+        save_name: pnet
+        select_best_model: false
+        shuffle: true
+        verbose: 2
+      model_params:
+        activation: tanh
+        add_unk_genes: false
+        attention: false
+        data_params: *id001
+        dropout:
+        - 0.5
+        - 0.1
+        - 0.1
+        - 0.1
+        dropout_testing: false
+        kernel_initializer: lecun_uniform
+        loss_weights:
+        - 2
+        - 20
+        - 400
+        n_hidden_layers: 2
+        optimizer: Adam
+        shuffle_genes: false
+        use_bias: true
+        w_reg:
+        - 0.001
+        - 0.001
+        - 0.001
+        - 0.001
+        w_reg_outcomes:
+        - 0.01
+        - 0.01
+        - 0.01
+    type: nn
+- type: null
+- '{''aupr'': 0.6796160130843604, ''f1'': 0.7047619047619048, ''auc'': 0.7258823529411764,
+  ''recall'': 0.7254901960784313, ''precision'': 0.6851851851851852, ''accuracy'':
+  0.693069306930693}'

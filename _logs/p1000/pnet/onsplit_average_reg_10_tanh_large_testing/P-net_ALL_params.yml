@@ -1,0 +1,102 @@
+data_params:
+  id: ALL
+  params:
+    balanced_data: false
+    cnv_levels: 5
+    combine_type: union
+    data_type:
+    - mut_important
+    - cnv_del
+    - cnv_amp
+    - promoter
+    drop_AR: false
+    mut_binary: true
+    selected_genes: breast_expressed_genes.csv
+    training_split: 0
+    use_coding_genes_only: false
+  type: prostate_paper
+exp_name: /home/user/tfprojects/pnet_prostate_paper-master2_grade/_logs/p1000/./pnet/onsplit_average_reg_10_tanh_large_testing
+features_params: {}
+model_params:
+  id: P-net_ALL
+  params:
+    build_fn: !!python/name:model.builders.prostate_models.build_pnet2 ''
+    feature_importance: deepexplain_deeplift
+    fitting_params:
+      batch_size: 32
+      class_weight: auto
+      debug: false
+      early_stop: false
+      epoch: 5
+      lr: 0.008
+      max_f1: true
+      monitor: val_o6_f1
+      n_outputs: 3
+      prediction_output: average
+      reduce_lr: false
+      reduce_lr_after_nepochs:
+        drop: 0.25
+        epochs_drop: 50
+      samples_per_epoch: 10
+      save_gradient: false
+      save_name: pnet
+      select_best_model: false
+      shuffle: false
+      verbose: 2
+    model_params:
+      activation: tanh
+      add_unk_genes: false
+      attention: false
+      data_params:
+        id: ALL
+        params:
+          balanced_data: false
+          cnv_levels: 5
+          combine_type: union
+          data_type:
+          - mut_important
+          - cnv_del
+          - cnv_amp
+          - promoter
+          drop_AR: false
+          mut_binary: true
+          selected_genes: breast_expressed_genes.csv
+          training_split: 0
+          use_coding_genes_only: false
+        type: prostate_paper
+      dropout:
+      - 0.5
+      - 0.1
+      - 0.1
+      - 0.1
+      dropout_testing: false
+      kernel_initializer: lecun_uniform
+      loss_weights:
+      - 2
+      - 20
+      - 400
+      n_hidden_layers: 2
+      optimizer: Adam
+      shuffle_genes: false
+      use_bias: true
+      w_reg:
+      - 0.001
+      - 0.001
+      - 0.001
+      - 0.001
+      w_reg_outcomes:
+      - 0.01
+      - 0.01
+      - 0.01
+  type: nn
+pipeline_params:
+  params:
+    eval_dataset: test
+    save_train: true
+  type: one_split
+pre_params:
+  type: null
+score: '{''aupr'': 0.8845834324156554, ''f1'': 0.7968749999999999, ''auc'': 0.8669365721997302,
+  ''recall'': 0.7846153846153846, ''precision'': 0.8095238095238095, ''accuracy'':
+  0.7868852459016393}'
+task: classification_binary

@@ -1,0 +1,36 @@
+﻿,name,id
+,hsa05200,Pathways in cancer
+,hsa04080,Neuroactive ligand-receptor interaction
+,hsa05207,Chemical carcinogenesis
+,hsa05226,Gastric cancer
+,hsa05163,Human cytomegalovirus infection
+,hsa05169,Epstein-Barr virus infection
+,hsa05167,Kaposi sarcoma-associated herpesvirus infection
+,hsa00230,Purine metabolism
+,hsa05223,Non-small cell lung cancer
+,hsa05230,Central carbon metabolism in cancer
+,hsa04211,Longevity regulating pathway
+,hsa05168,Herpes simplex virus 1 infection
+,hsa04151,PI3K-Akt signaling pathway
+,hsa05131,Shigellosis
+,hsa04218,Cellular senescence
+,hsa05215,Prostate cancer
+,hsa05014,Amyotrophic lateral sclerosisv
+,hsa04530,Tight junction
+,hsa05022,Pathways of neurodegeneration
+,hsa05224,Breast cancer
+,C05981,Phosphatidylinositol-3 4 5-trisphosphate
+,C00076,Ca2+
+,C00165,Diglyceride
+,C00704,O2-
+,C00039,DNA
+,C03917,Dihydrotestosterone
+,C00735,Cortisol
+,C00584,Prostaglandin E2
+,C00149,Malate
+,C00025,Glutamate
+,C00533,NO
+,C00280,Androstenedione
+,C00027,H2O2
+,C00410,Progesterone
+,C00777,Vitamin A acid

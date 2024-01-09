@@ -1,0 +1,39 @@
+data_params:
+  id: data_0
+  params:
+    balanced_data: false
+    cnv_levels: 3
+    combine_type: union
+    data_type:
+    - mut_important
+    - cnv_del
+    - cnv_amp
+    drop_AR: false
+    mut_binary: true
+    selected_genes: tcga_prostate_expressed_genes_and_cancer_genes.csv
+    training_split: '0'
+    use_coding_genes_only: true
+  type: prostate_paper
+exp_name: /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test
+features_params: {}
+model_params:
+  id: Random Forest_data_0
+  params:
+    bootstrap: false
+    class_weight:
+      0: 0.75
+      1: 1.5
+    max_depth: null
+    n_estimators: 50
+  type: random_forest
+pipeline_params:
+  params:
+    eval_dataset: test
+    save_train: true
+  type: one_split
+pre_params:
+  type: null
+score: '{''aupr'': 0.7064227752713222, ''f1'': 0.6966292134831461, ''auc'': 0.7353823088455772,
+  ''recall'': 0.6739130434782609, ''precision'': 0.7209302325581395, ''accuracy'':
+  0.6983240223463687}'
+task: classification_binary

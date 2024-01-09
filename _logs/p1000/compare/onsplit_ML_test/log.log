@@ -1,0 +1,226 @@
+07/07 07:28 - {logs.py:22} - setting logs
+07/07 07:28 - {run_me.py:105} - random seed 23
+07/07 07:28 - {one_split.py:132} - loading data....
+07/07 07:28 - {data_reader.py:102} - loading mut_important
+07/07 07:28 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_mutations.csv,
+07/07 07:28 - {data_reader.py:41} - (2369, 173)
+07/07 07:28 - {data_reader.py:212} - loading response from breast_response.csv
+07/07 07:28 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:28 - {data_reader.py:72} - loaded data 1794 samples, 123 variables, 1794 responses 
+07/07 07:28 - {data_reader.py:73} - 123
+07/07 07:28 - {data_reader.py:114} - mut_binary = True
+07/07 07:28 - {data_reader.py:102} - loading cnv_del
+07/07 07:28 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_cna.csv,
+07/07 07:28 - {data_reader.py:41} - (2173, 22544)
+07/07 07:28 - {data_reader.py:44} - loading from memory cached_data
+07/07 07:28 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:28 - {data_reader.py:72} - loaded data 1892 samples, 11307 variables, 1892 responses 
+07/07 07:28 - {data_reader.py:73} - 11307
+07/07 07:28 - {data_reader.py:102} - loading cnv_amp
+07/07 07:28 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_backup/_database/prostate/processed/breast_data_cna.csv,
+07/07 07:28 - {data_reader.py:36} - loading from memory cached_data
+07/07 07:28 - {data_reader.py:41} - (2173, 22544)
+07/07 07:28 - {data_reader.py:44} - loading from memory cached_data
+07/07 07:28 - {data_reader.py:69} - some genes dont exist in the original data set
+07/07 07:28 - {data_reader.py:72} - loaded data 1892 samples, 11307 variables, 1892 responses 
+07/07 07:28 - {data_reader.py:73} - 11307
+07/07 07:28 - {data_reader.py:265} - After combining, loaded data 1794 samples, 31287 variables, 1794 responses 
+07/07 07:28 - {one_split.py:137} - predicting
+07/07 07:28 - {one_split.py:150} - x_train (1524, 31287) y_train (1524, 1) 
+07/07 07:28 - {one_split.py:151} - x_test (179, 31287) y_test (179, 1) 
+07/07 07:28 - {one_split.py:154} - preprocessing....
+07/07 07:28 - {one_split.py:306} - preprocessing....
+07/07 07:28 - {pre.py:10} - Pre-processing: None
+07/07 07:28 - {one_split.py:161} - fitting
+07/07 07:28 - {one_split.py:162} - {'type': 'sgd', 'params': {'penalty': 'l2', 'loss': 'log', 'alpha': 0.01, 'class_weight': {0: 0.75, 1: 1.5}}, 'id': 'L2 Logistic Regression'}
+07/07 07:28 - {one_split.py:167} - predicting
+07/07 07:28 - {one_split.py:172} - model id: L2 Logistic Regression_data_0
+07/07 07:28 - {one_split.py:295} - predicitng ...
+07/07 07:28 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.73      0.43      0.54        87
+           1       0.61      0.85      0.71        92
+
+   micro avg       0.64      0.64      0.64       179
+   macro avg       0.67      0.64      0.62       179
+weighted avg       0.67      0.64      0.63       179
+
+07/07 07:28 - {one_split.py:176} - model name L2 Logistic Regression_data_0 -- Test score {'aupr': 0.7677264814526845, 'f1': 0.709090909090909, 'auc': 0.7564967516241878, 'recall': 0.8478260869565217, 'precision': 0.609375, 'accuracy': 0.6424581005586593}
+07/07 07:28 - {one_split.py:179} - saving results
+07/07 07:28 - {one_split.py:278} - saving yml : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/L2 Logistic Regression_data_0_params.yml
+07/07 07:28 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/L2 Logistic Regression_data_0_testing.csv
+07/07 07:28 - {one_split.py:242} - saving coef 
+07/07 07:28 - {one_split.py:194} - saving coef
+07/07 07:28 - {one_split.py:295} - predicitng ...
+07/07 07:28 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.90      0.48      0.63       753
+           1       0.65      0.95      0.77       771
+
+   micro avg       0.72      0.72      0.72      1524
+   macro avg       0.78      0.72      0.70      1524
+weighted avg       0.78      0.72      0.70      1524
+
+07/07 07:28 - {one_split.py:202} - model L2 Logistic Regression_data_0 -- Train score {'aupr': 0.878722657900629, 'f1': 0.7732067510548523, 'auc': 0.872398861105513, 'recall': 0.9507133592736705, 'precision': 0.6515555555555556, 'accuracy': 0.7178477690288714}
+07/07 07:28 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/L2 Logistic Regression_data_0_training.csv
+07/07 07:28 - {one_split.py:161} - fitting
+07/07 07:28 - {one_split.py:162} - {'type': 'svc', 'params': {'kernel': 'rbf', 'C': 100, 'gamma': 0.001, 'probability': True, 'class_weight': {0: 0.75, 1: 1.5}}, 'id': 'RBF Support Vector Machine '}
+07/07 07:34 - {one_split.py:167} - predicting
+07/07 07:34 - {one_split.py:172} - model id: RBF Support Vector Machine _data_0
+07/07 07:34 - {one_split.py:295} - predicitng ...
+07/07 07:35 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.66      0.75      0.70        87
+           1       0.73      0.64      0.68        92
+
+   micro avg       0.69      0.69      0.69       179
+   macro avg       0.70      0.69      0.69       179
+weighted avg       0.70      0.69      0.69       179
+
+07/07 07:35 - {one_split.py:176} - model name RBF Support Vector Machine _data_0 -- Test score {'aupr': 0.7354112503386988, 'f1': 0.6820809248554912, 'auc': 0.7501249375312343, 'recall': 0.6413043478260869, 'precision': 0.7283950617283951, 'accuracy': 0.6927374301675978}
+07/07 07:35 - {one_split.py:179} - saving results
+07/07 07:35 - {one_split.py:278} - saving yml : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/RBF Support Vector Machine _data_0_params.yml
+07/07 07:35 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/RBF Support Vector Machine _data_0_testing.csv
+07/07 07:35 - {one_split.py:242} - saving coef 
+07/07 07:35 - {one_split.py:194} - saving coef
+07/07 07:35 - {one_split.py:295} - predicitng ...
+07/07 07:36 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.97      0.98      0.97       753
+           1       0.98      0.97      0.98       771
+
+   micro avg       0.98      0.98      0.98      1524
+   macro avg       0.98      0.98      0.98      1524
+weighted avg       0.98      0.98      0.98      1524
+
+07/07 07:36 - {one_split.py:202} - model RBF Support Vector Machine _data_0 -- Train score {'aupr': 0.996323881558881, 'f1': 0.9752604166666666, 'auc': 0.997107979668012, 'recall': 0.9714656290531777, 'precision': 0.9790849673202614, 'accuracy': 0.9750656167979003}
+07/07 07:36 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/RBF Support Vector Machine _data_0_training.csv
+07/07 07:36 - {one_split.py:161} - fitting
+07/07 07:36 - {one_split.py:162} - {'type': 'svc', 'params': {'kernel': 'linear', 'C': 0.1, 'probability': True, 'class_weight': {0: 0.75, 1: 1.5}}, 'id': 'Linear Support Vector Machine '}
+07/07 07:41 - {one_split.py:167} - predicting
+07/07 07:41 - {one_split.py:172} - model id: Linear Support Vector Machine _data_0
+07/07 07:41 - {one_split.py:295} - predicitng ...
+07/07 07:41 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.69      0.76      0.73        87
+           1       0.75      0.68      0.72        92
+
+   micro avg       0.72      0.72      0.72       179
+   macro avg       0.72      0.72      0.72       179
+weighted avg       0.72      0.72      0.72       179
+
+07/07 07:41 - {one_split.py:176} - model name Linear Support Vector Machine _data_0 -- Test score {'aupr': 0.7665791223194771, 'f1': 0.7159090909090908, 'auc': 0.7552473763118441, 'recall': 0.6847826086956522, 'precision': 0.75, 'accuracy': 0.7206703910614525}
+07/07 07:41 - {one_split.py:179} - saving results
+07/07 07:41 - {one_split.py:278} - saving yml : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Linear Support Vector Machine _data_0_params.yml
+07/07 07:41 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Linear Support Vector Machine _data_0_testing.csv
+07/07 07:41 - {one_split.py:242} - saving coef 
+07/07 07:41 - {one_split.py:194} - saving coef
+07/07 07:41 - {one_split.py:295} - predicitng ...
+07/07 07:43 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.94      0.95      0.94       753
+           1       0.95      0.94      0.95       771
+
+   micro avg       0.94      0.94      0.94      1524
+   macro avg       0.94      0.94      0.94      1524
+weighted avg       0.94      0.94      0.94      1524
+
+07/07 07:43 - {one_split.py:202} - model Linear Support Vector Machine _data_0 -- Train score {'aupr': 0.9867419933777855, 'f1': 0.9454545454545453, 'auc': 0.9864984506418769, 'recall': 0.9442282749675746, 'precision': 0.9466840052015605, 'accuracy': 0.9448818897637795}
+07/07 07:43 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Linear Support Vector Machine _data_0_training.csv
+07/07 07:43 - {one_split.py:161} - fitting
+07/07 07:43 - {one_split.py:162} - {'type': 'random_forest', 'params': {'n_estimators': 50, 'bootstrap': False, 'max_depth': None, 'class_weight': {0: 0.75, 1: 1.5}}, 'id': 'Random Forest'}
+07/07 07:43 - {one_split.py:167} - predicting
+07/07 07:43 - {one_split.py:172} - model id: Random Forest_data_0
+07/07 07:43 - {one_split.py:295} - predicitng ...
+07/07 07:43 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.68      0.72      0.70        87
+           1       0.72      0.67      0.70        92
+
+   micro avg       0.70      0.70      0.70       179
+   macro avg       0.70      0.70      0.70       179
+weighted avg       0.70      0.70      0.70       179
+
+07/07 07:43 - {one_split.py:176} - model name Random Forest_data_0 -- Test score {'aupr': 0.7064227752713222, 'f1': 0.6966292134831461, 'auc': 0.7353823088455772, 'recall': 0.6739130434782609, 'precision': 0.7209302325581395, 'accuracy': 0.6983240223463687}
+07/07 07:43 - {one_split.py:179} - saving results
+07/07 07:43 - {one_split.py:278} - saving yml : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Random Forest_data_0_params.yml
+07/07 07:43 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Random Forest_data_0_testing.csv
+07/07 07:43 - {one_split.py:242} - saving coef 
+07/07 07:43 - {one_split.py:194} - saving coef
+07/07 07:43 - {one_split.py:295} - predicitng ...
+07/07 07:43 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       753
+           1       1.00      1.00      1.00       771
+
+   micro avg       1.00      1.00      1.00      1524
+   macro avg       1.00      1.00      1.00      1524
+weighted avg       1.00      1.00      1.00      1524
+
+07/07 07:43 - {one_split.py:202} - model Random Forest_data_0 -- Train score {'aupr': 0.9999816098878649, 'f1': 0.9980557355800389, 'auc': 0.9999888039713175, 'recall': 0.9987029831387808, 'precision': 0.9974093264248705, 'accuracy': 0.9980314960629921}
+07/07 07:43 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Random Forest_data_0_training.csv
+07/07 07:43 - {one_split.py:161} - fitting
+07/07 07:43 - {one_split.py:162} - {'type': 'adaboost', 'params': {'n_estimators': 50, 'learning_rate': 0.1}, 'id': 'Adaptive Boosting'}
+07/07 07:44 - {one_split.py:167} - predicting
+07/07 07:44 - {one_split.py:172} - model id: Adaptive Boosting_data_0
+07/07 07:44 - {one_split.py:295} - predicitng ...
+07/07 07:44 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.68      0.86      0.76        87
+           1       0.82      0.61      0.70        92
+
+   micro avg       0.73      0.73      0.73       179
+   macro avg       0.75      0.74      0.73       179
+weighted avg       0.75      0.73      0.73       179
+
+07/07 07:44 - {one_split.py:176} - model name Adaptive Boosting_data_0 -- Test score {'aupr': 0.7486098113815948, 'f1': 0.7, 'auc': 0.7924787606196901, 'recall': 0.6086956521739131, 'precision': 0.8235294117647058, 'accuracy': 0.7318435754189944}
+07/07 07:44 - {one_split.py:179} - saving results
+07/07 07:44 - {one_split.py:278} - saving yml : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Adaptive Boosting_data_0_params.yml
+07/07 07:44 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Adaptive Boosting_data_0_testing.csv
+07/07 07:44 - {one_split.py:242} - saving coef 
+07/07 07:44 - {one_split.py:194} - saving coef
+07/07 07:44 - {one_split.py:295} - predicitng ...
+07/07 07:44 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.69      0.80      0.74       753
+           1       0.77      0.64      0.70       771
+
+   micro avg       0.72      0.72      0.72      1524
+   macro avg       0.73      0.72      0.72      1524
+weighted avg       0.73      0.72      0.72      1524
+
+07/07 07:44 - {one_split.py:202} - model Adaptive Boosting_data_0 -- Train score {'aupr': 0.7957353140786916, 'f1': 0.7005649717514124, 'auc': 0.7866596734549051, 'recall': 0.6433203631647212, 'precision': 0.7689922480620155, 'accuracy': 0.7217847769028871}
+07/07 07:44 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Adaptive Boosting_data_0_training.csv
+07/07 07:44 - {one_split.py:161} - fitting
+07/07 07:44 - {one_split.py:162} - {'type': 'decision_tree', 'params': {'min_samples_split': 10, 'max_depth': 10}, 'id': 'Decision Tree'}
+07/07 07:44 - {one_split.py:167} - predicting
+07/07 07:44 - {one_split.py:172} - model id: Decision Tree_data_0
+07/07 07:44 - {one_split.py:295} - predicitng ...
+07/07 07:44 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.69      0.85      0.76        87
+           1       0.82      0.64      0.72        92
+
+   micro avg       0.74      0.74      0.74       179
+   macro avg       0.76      0.75      0.74       179
+weighted avg       0.76      0.74      0.74       179
+
+07/07 07:44 - {one_split.py:176} - model name Decision Tree_data_0 -- Test score {'aupr': 0.7594077905941808, 'f1': 0.7195121951219512, 'auc': 0.7661169415292354, 'recall': 0.6413043478260869, 'precision': 0.8194444444444444, 'accuracy': 0.7430167597765364}
+07/07 07:44 - {one_split.py:179} - saving results
+07/07 07:44 - {one_split.py:278} - saving yml : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Decision Tree_data_0_params.yml
+07/07 07:44 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Decision Tree_data_0_testing.csv
+07/07 07:44 - {one_split.py:242} - saving coef 
+07/07 07:44 - {one_split.py:194} - saving coef
+07/07 07:44 - {one_split.py:295} - predicitng ...
+07/07 07:44 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.79      0.87      0.83       753
+           1       0.86      0.78      0.81       771
+
+   micro avg       0.82      0.82      0.82      1524
+   macro avg       0.82      0.82      0.82      1524
+weighted avg       0.82      0.82      0.82      1524
+
+07/07 07:44 - {one_split.py:202} - model Decision Tree_data_0 -- Train score {'aupr': 0.8716177926005957, 'f1': 0.8147138964577657, 'auc': 0.8758282908142612, 'recall': 0.7756160830090791, 'precision': 0.8579626972740315, 'accuracy': 0.821522309711286}
+07/07 07:44 - {one_split.py:76} - saving results : /home/user/tfprojects/pnet_prostate_paper-master2_backup/_logs/p1000/./compare/onsplit_ML_test/Decision Tree_data_0_training.csv
+07/07 07:44 - {run_me.py:134} - Elapsed Time: 15m 37s

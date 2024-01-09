@@ -1,0 +1,13 @@
+07/12 11:25 - {logs.py:22} - setting logs
+07/12 11:25 - {run_me.py:105} - random seed 23
+07/12 11:25 - {one_split.py:132} - loading data....
+07/12 11:25 - {data_reader.py:102} - loading mut_important
+07/12 11:25 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_grade/_database/prostate/processed/breast_data_mutations.csv,
+07/12 11:25 - {data_reader.py:41} - (2369, 173)
+07/12 11:25 - {data_reader.py:212} - loading response from breast_response.csv
+07/12 11:25 - {data_reader.py:69} - some genes dont exist in the original data set
+07/12 11:25 - {data_reader.py:72} - loaded data 1794 samples, 169 variables, 1794 responses 
+07/12 11:25 - {data_reader.py:73} - 169
+07/12 11:25 - {data_reader.py:114} - mut_binary = True
+07/12 11:25 - {data_reader.py:102} - loading cnv_del
+07/12 11:25 - {data_reader.py:34} - loading data from /home/user/tfprojects/pnet_prostate_paper-master2_grade/_database/prostate/processed/breast_data_cna.csv,
